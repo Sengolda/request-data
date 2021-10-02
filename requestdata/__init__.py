@@ -5,10 +5,10 @@ from dataclasses import dataclass
 class Request:
     url: str
     method: Literal["GET", "POST", "PUT", "DELETE"]
-    headers: dict = dict()
-    params: dict = dict()
-    data: dict = dict()
-    json: dict = dict()
+    headers = dict()
+    params  = dict()
+    data = dict()
+    json  = dict()
 
     def to_dict(self):
         returning_dict = {a: getattr(self, a) for a in (
